@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tabel{
+            display: flex;
+            justify-content: center;
+        }
+
+        table{
+            border: solid black;
+        }
+    </style>
+
+    <script>
+function kalkulator(){
+let inputan1 = document.getElementById("inputan").value;
+let mata_uang=document.getElementById("matauang").value;
+console.log(inputan1 * mata_uang);
+
+let area_hasil=document.getElementById("hasil");
+area_hasil.innerHTML = inputan1*mata_uang;
+}
+    </script>
+</head>
+<body>
+<div class="tabel">
+    <table style="width:50%"">
+    <tr>
+        <td>masukan nilai</td>
+        <td>mata uang</td>
+        <td>nilai rupiah</td>
+
+       
+    </tr>
+    <tr>
+        <td><input type="number"onchange="kalkulator()" id="inputan">
+            <td>
+                <input type="number">
+            </td>
+            <td>
+                <select id="matauang"onchange="kalkulator()">
+                    <option value="9915">dolar us</option>
+                    <option value="13472">dolar singapure</option>
+                    <option value="874">ringgit malaysia</option>
+                    <option value="120">yen jepan</option>
+                    <option value="15888">euro</option>
+                    <option value="3592">riyal arab saudi</option>
+                
+                </select>
+            </td>
+            
+            
+
+            
+            <td>
+                <p id="hasil"></p>
+            </td>
+            
+        </tr>
+    </table>
+</div>
+</body>
+</html>
